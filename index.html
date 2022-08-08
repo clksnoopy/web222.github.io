@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Chan Lai Kuen">
+        <title>WEB222 Final Assessment</title>
+        <link rel="stylesheet" href="./css/mystyle.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet">
+
+        
+        <script src="https://kit.fontawesome.com/a490f17845.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header></header>
+        <main>
+            <!-- Picture and buttons -->
+            <div id="myPhoto">
+                <img src="./img/beautifulday.jpeg" alt="MyPhoto">
+                <div>
+                    <h1>Chan Lai Kuen</h1>
+                    <p>IT security specialist</p>
+                    
+                    <!-- Two Buttons -->
+                    <!-- Resume -->
+                    <div id="down-btn">
+                        <a class="fcc-btn" href="./doc/resume.pdf" download="resume">Resume</a>
+                    
+                        <!-- Contact --> 
+                        <a class="fcc-btn1" href="#contact">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info about me -->
+            <div id="myinfo">
+                <section id = "aboutme">
+                    <div class="info">
+                        <h2 class="infoheadings">About Me</h2>
+                        <p>
+                            Hello! My name is Canny Chan Lai Kuen. I was born and raised in Hong Kong and move to Canada for higher education. Now I am pursuing an Advanced Diploma in Computer Programming Program at Seneca College, Toronto.
+                        </p>
+                        <p>I am energetic and full of passion with 12+ years of Information Technician experience.
+                            Apart from studies, I have a keen interest in different kind of sports such as soccer, basketball, swimming etc.
+                        </p>
+                    </div>
+
+                    <div class="infodetail">
+                        <h2 class="infoheadings" id="basic-info">Basic Information</h2>
+                        <div id="basic-infowrapper">
+                            <div id="info-header">
+                                <p>Name:</p> 
+                                <p>Email:</p>
+                                <p>Course:</p> 
+                                <p>Section:</p>
+                                <p>Student ID:</p>
+                                <p>Instructor:</p>  
+                            </div>
+
+                            <div id="info-content">
+                                <p>Chan Lai Kuen</p>
+                                <p>lchan91@myseneca.ca</p>
+                                <p>WEB222</p>
+                                <p>NEE</p>
+                                <p>147820211</p>
+                                <p>Norman Atique</p>
+                            </div>   
+                        </div>         
+                    </div>
+                </section>
+                <!-- Honesty Statement-->
+                <section class="honest">
+                    <h2>Academic Honesty</h2>
+
+                    <p id="statement">
+                        I declare that my assessment is wholly my own work in accordance with Seneca Academic 
+                        Policy. No part of this assessment has been copied manually or electronically from any other 
+                        source (including web sites) except for the information supplied by the WEB222 instructors and /
+                        or made available in this assessment for my use. I also declare that no part of this assignment 
+                        has been distributed to other students.
+                    </p>
+                    <p>
+                        Date: <span class="todaydate"></span>
+                    </p>
+                </section>
+            </div>
+
+            <!-- My Education -->
+            <section id="myeducation">
+                <h2>&#X1F393; Education</h2>
+                <div id="seneca" class="card">
+                    <div class="cardleft">
+                        <div>
+                            <h3>2021 - now</h3>
+                        </div>
+                    </div>
+                
+
+                    <section class="cardtxt">
+                        <h3>Seneca College</h3>
+                        <h4>School of Software Design & Data Science</h4>
+                        <p>Computer Programming</p>
+                    </section>
+                </div>
+
+                <div id="history" class="card">
+                    <div class="cardleft">
+                        <h3>1992-1994</h3>    
+                    </div>
+                    <section class="cardtxt">
+                        <h3>NCC</h3>
+                        <p>Advanced Diploma in Computer Studies</p>
+                    </section>
+                </div>
+            </section>
+
+            <!-- Contact Me Form -->
+            <section class="container" id="contact">
+                <h2>&#128231; Contact Form</h2>
+                <p><span class="text-danger">*</span> Required Field</p>
+
+                <form id="contact-form" action="https://httpbin.org/post" method="POST">
+                    <label for="full-name"><span class="text-danger">*</span> 
+                        <i class="far fa-user" aria-hidden="true"></i> Full Name
+                    </label>
+                    <input id="full-name" 
+                        name="full-name"
+                        autocomplete="name"
+                        type="text"
+                        placeholder="e.g John Doe"    
+                        title="Enter your full name"
+                        tabindex="1"
+                        required>
+
+                    <label for="email"><span class="text-danger">*</span>
+                        <i class="far fa-envelope" aria-hidden="true"></i> Email Address</label>
+                    <input
+                        id="email" 
+                        name="email"
+                        autocomplete="email"
+                        type="email"
+                        placeholder="username@email.com"    
+                        pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$"
+                        title="Enter an email address"
+                        tabindex="2"
+                        required>
+    
+                    <label for="address"><span class="text-danger">*</span>
+                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                            Street Address</label>
+                    <input id="address" 
+                        class="form-control" 
+                        name="address" 
+                        autocomplete="address-line1" 
+                        type="text"
+                        tabindex="3" 
+                        required>
+
+                    <label for="city"><span class="text-danger">*</span> City</label>
+                    <input id="city" 
+                        class="form-control" 
+                        name="city" 
+                        autocomplete="address-level2" 
+                        list="cities" 
+                        tabindex="4"
+                        required>
+                    <datalist id="cities" class="" tabindex="5">
+                        <option value="Charlottetown"></option>
+                        <option value="Edmonton"></option>
+                        <option value="Fredericton"></option>
+                        <option value="Halifax"></option>
+                        <option value="Iqaluit"></option>
+                        <option value="Ottawa"></option>
+                        <option value="Quebec City"></option>
+                        <option value="Regina"></option>
+                        <option value="St. John's"></option>
+                        <option value="Toronto"></option>
+                        <option value="Victoria"></option>
+                        <option value="Whitehorse"></option>
+                        <option value="Winnipeg"></option>
+                        <option value="Yellowknife"></option>
+                    </datalist>
+
+                    <label for="prov"><span class="text-danger">*</span> Province</label>
+                        <select id="prov" class="form-control" name="prov" autocomplete="address-level1" tabindex="6">
+                            <option>Alberta</option>
+                            <option>British Columbia</option>
+                            <option>Manitoba</option>
+                            <option>New Brunswick</option>
+                            <option>Newfoundland and Labrador</option>
+                            <option>Northwest Territories</option>
+                            <option>Nova Scotia</option>
+                            <option>Nunavut</option>
+                            <option selected>Ontario</option>
+                            <option>Prince Edward Island</option>
+                            <option>Quebec</option>
+                            <option>Saskatchewan</option>
+                            <option>Yukon</option>
+                        </select>
+
+
+                    <label for="postal"><span>*</span> Postal Code </label>
+                    <input id="postal" 
+                        name="postal"
+                        autocomplete="postal-code"
+                        type="text"
+                        placeholder="M5R 1T8"    
+                        pattern="^[a-zA-Z]\d[a-zA-Z]\s?\d[a-zA-Z]\d$"
+                        title="Enter valid Canadian postal code e.g M5R 1T8"
+                        tabindex="7"
+                        required>
+
+                    <label class=""><span class="text-danger">*</span> Subject</label>
+                    <section class="radio-section">
+                        <div class="radio-list">
+                            <div class="radio-item"><input class= "radio-items" name="subject" id="question" type="radio" value = "question" checked =      "checked" tabindex="8"><label for="question"> Question</label>
+                            </div>
+                        <div class="radio-item"><input class= "radio-items" name="subject" id="comment" type="radio" value = "comment" tabindex="9"><label for="comment"> Comment</label>
+                        </div>
+                        <div class="radio-item"><input class= "radio-items" name="subject" id="hiring" type="radio" value = "hiring" tabindex="10"><label for="hiring"> Hiring</label>
+                        </div>
+
+                        <div id="job">
+                            <label for="payrate"><span class="text-danger">*</span> Hourly Rate</label>
+                            <input id="payrate" class="form-control" 
+                                name="pay" 
+                                placeholder="$0 or greater" 
+                                type="number" 
+                                tabindex="11"
+                                required>
+                    <br>
+                            <label for="company">Company Name (Optional)</label>
+                            <input id = "company" class="form-control" 
+                                name="text" 
+                                autocomplete="off"
+                                tabindex="12">
+                    <br>
+                            <label for="url">Company Website URL (Optional)</label>
+                            <input id="url" class="form-control" 
+                                name="url" 
+                                autocomplete="off"
+                                placeholder="http://www.company.ca" 
+                                type="url" 
+                                tabindex="13">
+                        </div>
+                    </div>
+                    </section>
+
+                    <label for="message">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        Message
+                    </label>
+                        <textarea id="message"
+                            name="message"
+                            rows="7"
+                            placeholder="Enter message here"
+                            maxlength="2000"
+                            tabindex="14">
+                        </textarea>
+    
+                    <div id="form-button">
+                        <input type="submit" name="submit" value="Submit" tabindex="15">
+                        <input type="reset" name="reset" value="Reset" tabindex="16">
+                    </div>
+            </form>
+    </section>
+</main>
+
+
+
+<script src="./js/webjs.js"></script>
+<footer id = "end">
+    <p>&lt;&lt;&lt;Copyright &copy;2022 Chan Lai Kuen&gt;&gt;&gt;</p>
+</footer>
+
+
+</body>
+</html>
